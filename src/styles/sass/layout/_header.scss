@@ -9,13 +9,43 @@
   .container {
     padding: 40px 20px;
   }
-  &__profile-photo {
-    width: 130px;
-    border: 2px solid $primary-color;
+  &__container-img {
+    width: 120px;
+    margin: auto;
+    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
     border-radius: 100%;
-    padding: 5px;
+    padding: 4px;
+    transition: transform .3s;
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      height: 100%;
+      width: 100%;
+      opacity: 0.8;
+      border-radius: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      background: inherit;
+  
+      -webkit-filter: blur(8px);
+      -moz-filter: blur(8px);
+      -o-filter: blur(8px);
+      -ms-filter: blur(8px);
+      filter: blur(8px);
+    }
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  &__profile-photo {
+    width: 100%;
+    border-radius: 50%;
     display: block;
-    margin: 0 auto;
   }
   &__name {
     font-size: var(--primary-heading-font-size);

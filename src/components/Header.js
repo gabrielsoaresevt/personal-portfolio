@@ -50,9 +50,11 @@ export default function Header() {
   return (
     <header className="header">
       <div className="container">
-        <img className="header__profile-photo"
-          src="https://github.com/gabrielsoaresevt.png" 
-          alt="Foto do Gabriel Soares Evangelista" />
+        <div class="header__container-img">
+          <img className="header__profile-photo"
+            src="https://github.com/gabrielsoaresevt.png" 
+            alt="Foto do Gabriel Soares Evangelista" />
+        </div>
         <p className="header__name">
           Gabriel Soares Evangelista
           <span className="header__role">
