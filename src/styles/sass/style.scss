@@ -1,8 +1,17 @@
 // Abstracts
 @import './abstracts/_colors';
+@import './abstracts/_font-size';
 
 // Base
 @import './base/_reset';
+
+// Layout
+@import './layout/_header.scss';
+@import './layout/_footer';
+@import './layout/main';
+
+// Pages
+@import './pages/_app';
 
 // Vendors
 @import './vendors/_normalize';
