@@ -1,0 +1,17 @@
+.section-title {
+  font-size: var(--secondary-heading-font-size);
+  color: $secondary-text-color;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 80%;
+    height: 3px;
+    bottom: -15px;
+    background-color: $primary-color;
+    transform-origin: left;
+  }
+}

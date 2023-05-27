@@ -1,5 +1,6 @@
 import Header from './components/Header';
 import Footer from './components/Footer';
+import SectionTitle from './components/SectionTitle';
 
 export default function App() {
   return (
@@ -7,80 +8,30 @@ export default function App() {
       <Header />
       <main className="main">
         <div className="container">
-          <section className="main__about-me">
-            <h2 id="#inicio" className="main__aboout-me__title">Sobre mim</h2>
+          <section className="main__apresentation">
+            <SectionTitle
+              title="Olá, eu sou Gabriel Soares Evangelista"
+            />
           </section>
-          <section className="main__about-me">
-            <h2 id="#inicio" className="main__aboout-me__title">Sobre mim</h2>
+          <section>
+            <SectionTitle
+              title="Portfólio"
+            />
           </section>
-          <section className="main__about-me">
-            <h2 id="#inicio" className="main__aboout-me__title">Sobre mim</h2>
+          <section>
+            <SectionTitle
+              title="Tech Stack"
+            />
           </section>
-          <section className="main__about-me">
-            <h2 id="#inicio" className="main__aboout-me__title">Sobre mim</h2>
+          <section>
+            <SectionTitle
+              title="Contato"
+            />
           </section>
-          <section className="main__about-me">
-            <h2 id="#inicio" className="main__aboout-me__title">Sobre mim</h2>
-          </section>
-          <section className="main__about-me">
-            <h2 id="#inicio" className="main__aboout-me__title">Sobre mim</h2>
-          </section>
-          <section className="main__about-me">
-            <h2 id="#inicio" className="main__aboout-me__title">Sobre mim</h2>
-          </section>
-          <section className="main__about-me">
-            <h2 id="#inicio" className="main__aboout-me__title">Sobre mim</h2>
-          </section>
-          <section className="main__about-me">
-            <h2 id="#inicio" className="main__aboout-me__title">Sobre mim</h2>
-          </section>
-          <section className="main__about-me">
-            <h2 id="#inicio" className="main__aboout-me__title">Sobre mim</h2>
-          </section>
-          <section className="main__about-me">
-            <h2 id="#inicio" className="main__aboout-me__title">Sobre mim</h2>
-          </section>
-          <section className="main__about-me">
-            <h2 id="#inicio" className="main__aboout-me__title">Sobre mim</h2>
-          </section>
-          <section className="main__about-me">
-            <h2 id="#inicio" className="main__aboout-me__title">Sobre mim</h2>
-          </section>
-          <section className="main__about-me">
-            <h2 id="#inicio" className="main__aboout-me__title">Sobre mim</h2>
-          </section>
-          <section className="main__about-me">
-            <h2 id="#inicio" className="main__aboout-me__title">Sobre mim</h2>
-          </section>
-          <section className="main__about-me">
-            <h2 id="#inicio" className="main__aboout-me__title">Sobre mim</h2>
-          </section>
-          <section className="main__about-me">
-            <h2 id="#inicio" className="main__aboout-me__title">Sobre mim</h2>
-          </section>
-          <section className="main__about-me">
-            <h2 id="#inicio" className="main__aboout-me__title">Sobre mim</h2>
-          </section>
-          <section className="main__about-me">
-            <h2 id="#inicio" className="main__aboout-me__title">Sobre mim</h2>
-          </section>
-          <section className="main__about-me">
-            <h2 id="#inicio" className="main__aboout-me__title">Sobre mim</h2>
-          </section>
-          <section className="main__about-me">
-            <h2 id="#inicio" className="main__aboout-me__title">Sobre mim</h2>
-          </section>
-          <section className="main__about-me">
-            <h2 id="#inicio" className="main__aboout-me__title">Sobre mim</h2>
-          </section>
-          <section className="main__about-me">
-            <h2 id="#inicio" className="main__aboout-me__title">Sobre mim</h2>
-          </section>
-          <section className="main__about-me">
-            <h2 id="#inicio" className="main__aboout-me__title">Sobre mim</h2>
-          </section>
-          <section className="main__about-me">
-            <h2 id="#inicio" className="main__aboout-me__title">Sobre mim</h2>
+          <section>
+            <SectionTitle
+              title="Currículo"
+            />
           </section>
         </div>
       </main>
