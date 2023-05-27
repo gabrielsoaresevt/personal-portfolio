@@ -9,50 +9,24 @@
   .container {
     padding: 40px 20px;
   }
-  &__container-img {
+  &__profile-photo {
     width: 120px;
-    margin: auto;
-    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+    margin: 0 auto;
     border-radius: 100%;
-    padding: 4px;
+    display: block;
+    border: 2px solid $primary-color;
+    padding: 5px;
     transition: transform .3s;
-    position: relative;
-    &:after {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      height: 100%;
-      width: 100%;
-      opacity: 0.8;
-      border-radius: 100%;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-
-      background: inherit;
-  
-      -webkit-filter: blur(8px);
-      -moz-filter: blur(8px);
-      -o-filter: blur(8px);
-      -ms-filter: blur(8px);
-      filter: blur(8px);
-    }
     &:hover {
       transform: scale(1.1);
     }
-  }
-  &__profile-photo {
-    width: 100%;
-    border-radius: 50%;
-    display: block;
   }
   &__name {
     font-size: var(--primary-heading-font-size);
     font-weight: 700;
     color: $secondary-text-color;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 30px;
     span {
       font-size: var(--body-font-size);
       color: $primary-text-color;
@@ -83,10 +57,9 @@
     &__item { 
       margin: 15px 0;
       a {
-        font-size: var(--body-font-size);
         text-decoration: none;
-        color: $primary-text-color;
         transition: 0.225s ease;
+        color: $primary-text-color;
         &:hover {
           opacity: 0.7;
         }

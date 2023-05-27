@@ -1,11 +1,15 @@
 // Abstracts
 @import './abstracts/_colors';
 @import './abstracts/_font-size';
+@import './abstracts/_line-height';
 
 // Base
 @import './base/_reset';
 
+// Components
+@import './components/_section';
 @import './components/_section-title';
+@import './components/_paragraph';
 
 // Layout
 @import './layout/_header.scss';
