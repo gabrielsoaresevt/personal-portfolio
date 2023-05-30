@@ -10,11 +10,11 @@ export default function App() {
         <div className="container">
           <section className="main__apresentation section">
             <SectionTitle
-              title="Olá, eu sou Gabriel Soares Evangelista"
+              title="Olá, me chamo Gabriel Soares Evangelista"
             />
             <p className="main__apresentation paragraph">
               Desenvolvedor Web Freelancer e UI/UX Designer. Minha paixão é entender as necessidades
-              dos meus clientes e buscar ajudá-los da melhor forma possível para entregar aquilo que cumpra suas
+              dos meus clientes e buscar ajudá-los da melhor forma possível para entregar aquilo que cumpra com suas
               expectativas e faça a diferença em suas vidas!
             </p>
           </section>
