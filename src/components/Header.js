@@ -1,6 +1,6 @@
-import linkedinIcon from '../assets/linkedin-icon.png';
-import youtubeIcon from '../assets/youtube-icon.png';
-import githubIcon from '../assets/github-icon.png';
+import linkedinIcon from '../assets/img/icon/linkedin-icon.png';
+import youtubeIcon from '../assets/img/icon/youtube-icon.png';
+import githubIcon from '../assets/img/icon/github-icon.png';
 
 import SocialMediaListItem from './SocialMediaListItem';
 import NavigationMenuListItem from './NavigationMenuListItem';

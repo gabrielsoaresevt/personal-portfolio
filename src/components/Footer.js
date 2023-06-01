@@ -1,4 +1,4 @@
-import arrowUpIcon from '../assets/arrow-up-icon.png';
+import arrowUpIcon from '../assets/img/icon/arrow-up-icon.png';
 
 export default function Footer() {
   return (

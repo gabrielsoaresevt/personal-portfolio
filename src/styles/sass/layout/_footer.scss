@@ -6,6 +6,7 @@
   width: 5vw;
   height: 100vh;
   text-align: center;
+  border-left: 1px solid $secondary-color;
   &__arrow-up {
     width: 40px;
     cursor: pointer;
