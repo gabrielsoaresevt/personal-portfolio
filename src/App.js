@@ -73,10 +73,22 @@ export default function App() {
               })
             }
           </section>
-          <section className="section">
+          <section className="section tech-stack">
             <SectionTitle
               title="Tech Stack"
             />
+            <p>
+              Principais tecnologias e ferramentas que utilizado para desenvolvimento de websites
+            </p>
+            <ul className="tech-stack__images">
+              <li className="tech-stack__images__item"><img src="https://raw.githubusercontent.com/get-icon/geticon/fc0f660daee147afb4a56c64e12bde6486b73e39/icons/html-5.svg" alt="Imagem ícone HTML5"></img></li>
+              <li className="tech-stack__images__item"><img src="https://raw.githubusercontent.com/get-icon/geticon/fc0f660daee147afb4a56c64e12bde6486b73e39/icons/css-3.svg" alt="Imagem ícone CSS3"></img></li>
+              <li className="tech-stack__images__item"><img src="https://raw.githubusercontent.com/get-icon/geticon/fc0f660daee147afb4a56c64e12bde6486b73e39/icons/javascript.svg" alt="Imagem ícone JavaScript"></img></li>
+              <li className="tech-stack__images__item"><img src="https://raw.githubusercontent.com/get-icon/geticon/master/icons/sass.svg" alt="Imagem ícone SASS"></img></li>
+              <li className="tech-stack__images__item"><img src="https://raw.githubusercontent.com/get-icon/geticon/master/icons/git-icon.svg" alt="Imagem ícone Git"></img></li>
+              <li className="tech-stack__images__item"><img src="https://raw.githubusercontent.com/get-icon/geticon/master/icons/bootstrap.svg" alt="Imagem ícone Bootstrap"></img></li>
+              <li className="tech-stack__images__item"><img src="https://raw.githubusercontent.com/get-icon/geticon/master/icons/visual-studio-code.svg" alt="Imagem ícone VS Code"></img></li>
+            </ul>
           </section>
           <section className="section">
             <SectionTitle
