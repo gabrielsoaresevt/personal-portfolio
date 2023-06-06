@@ -10,11 +10,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: transparent;
   width: 120px;
   height: 45px;
   border-radius: 5px;
   color: $primary-text-color;
   border: 2px solid $primary-color;
+  cursor: pointer;
   text-decoration: none;
   letter-spacing: 1px;
   box-shadow: 0 0 0.5em 0 $primary-color;

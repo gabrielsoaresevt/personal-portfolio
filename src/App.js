@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 import Header from './components/Header';
 import Footer from './components/Footer';
 import SectionTitle from './components/SectionTitle';
@@ -39,6 +41,11 @@ const portfoliListData = [
 ]
 
 export default function App() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+
   return (
     <div className="App">
       <Header />
@@ -94,6 +101,42 @@ export default function App() {
             <SectionTitle
               title="Contato"
             />
+            <form className="form" onSubmit={() => {}}>
+              <div>
+                <label for="name">Nome:</label>
+                <input 
+                  id="name"
+                  className="form__input form__input__name" 
+                  type="text"
+                  placeholder="Me diga o seu nome..."
+                  onChange={(e) => setName(e.target.value)}
+                  value={name}
+                />
+              </div>
+              <div>
+                <labe for="email">E-mail</labe>
+                <input 
+                  id="emaile"
+                  className="form__input form__input__email" 
+                  type="text"
+                  placeholder="Informe seu endereço de e-mail..."
+                  onChange={(e) => setEmail(e.target.value)}
+                  value={email}
+                />
+              </div>
+              <div>
+                <label for="message">Mensagem</label>
+                <textarea 
+                  id="message"
+                  className="form__input form__input__message" 
+                  type="text"
+                  placeholder=""
+                  onChange={(e) => setMessage(e.target.value)}
+                  value={message}
+                />
+              </div>
+              <button className="button button-form" type="submit">Enviar</button>
+            </form>
           </section>
           <section className="section">
             <SectionTitle
