@@ -41,11 +41,42 @@ const portfoliListData = [
 ]
 
 export default function App() {
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
+  function formValidation(e) {
+    e.preventDefault();
 
+    const regEx = /[a-zA-Z0-9._%+-]+@[a-z0-9·-]+\.[a-z]{2,8}(.[a-z{2,8}])?/g;
+
+    if(name === '') {
+      console.log("Preencha o campo nome");
+      return false;
+    }
+
+    if(email === '') {
+      console.log("Preencha o campo e-mail");
+      return false
+    } else if(regEx.test(email)) {
+      console.log("E-mail válido");
+      return false;
+    } else if (!regEx.test(email)) {
+      console.log("E-mail inválido");
+      return false;
+    }
+
+    if(message === '') {
+      console.log("Preencha o campo de mensagem");
+      return false;
+    } else if (message.length > 300) {
+      console.log("Máximo de caracteres permitidos: 1000");
+      return false;
+    }
+    
+    console.log("Tudo ok!");
+  }
   return (
     <div className="App">
       <Header />
@@ -101,9 +132,9 @@ export default function App() {
             <SectionTitle
               title="Contato"
             />
-            <form className="form" onSubmit={() => {}}>
-              <div>
-                <label for="name">Nome:</label>
+            <form className="form" onSubmit={formValidation}>
+              <div className="form__box-input">
+                <label className="form__label" for="name">Nome:</label>
                 <input 
                   id="name"
                   className="form__input form__input__name" 
@@ -113,8 +144,8 @@ export default function App() {
                   value={name}
                 />
               </div>
-              <div>
-                <labe for="email">E-mail</labe>
+              <div className="form__box-input">
+                <label className="form__label" for="email">E-mail:</label>
                 <input 
                   id="emaile"
                   className="form__input form__input__email" 
@@ -124,18 +155,18 @@ export default function App() {
                   value={email}
                 />
               </div>
-              <div>
-                <label for="message">Mensagem</label>
+              <div className="form__box-input">
+                <label className="form__label" for="message">Mensagem:</label>
                 <textarea 
                   id="message"
                   className="form__input form__input__message" 
                   type="text"
-                  placeholder=""
+                  placeholder="Como posso te ajudar?"
                   onChange={(e) => setMessage(e.target.value)}
                   value={message}
                 />
               </div>
-              <button className="button button-form" type="submit">Enviar</button>
+              <button className="button form__button" type="submit">Enviar</button>
             </form>
           </section>
           <section className="section">
