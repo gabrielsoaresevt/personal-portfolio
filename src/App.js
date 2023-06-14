@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -78,39 +78,52 @@ export default function App() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
+  const window = useRef();
+
   function formValidation(e) {
     e.preventDefault();
 
     const regEx = /[a-zA-Z0-9._%+-]+@[a-z0-9·-]+\.[a-z]{2,8}(.[a-z{2,8}])?/g;
 
+    let textMessage = "";
+
     if(name === '') {
-      console.log("Preencha o campo nome");
-      return false;
-    }
-
-    if(email === '') {
-      console.log("Preencha o campo e-mail");
-      return false
-    } else if(regEx.test(email)) {
-      console.log("E-mail válido");
-      return false;
-    } else if (!regEx.test(email)) {
-      console.log("E-mail inválido");
-      return false;
-    }
-
-    if(message === '') {
-      console.log("Preencha o campo de mensagem");
-      return false;
+      textMessage = "Preencha o campo nome";
+    } else if(email === '') {
+      textMessage = "Preencha o campo e-mail";
+    } else if(!regEx.test(email)) {
+      textMessage = "E-mail inválido"
+    } else if(message === '') {
+      textMessage = "Preencha o campo mensagem";
     } else if (message.length > 300) {
-      console.log("Máximo de caracteres permitidos: 1000");
-      return false;
+      textMessage = "Máximo de caracteres permitidos: 1000";
     }
-    
-    console.log("Tudo ok!");
+
+    textMessage !== "" ? showMessage(textMessage) : textMessage = "Mensagem enviada com sucesso!"
+
+    showMessage(textMessage);
   }
+
+  function showMessage(msg) {
+    const showMessage = document.createElement('div');
+    
+    if(msg !== "Mensagem enviada com sucesso!") {
+      showMessage.classList.add("alert");
+    } else {
+      showMessage.classList.add("alert", "sucess");
+    }
+
+    showMessage.innerText = msg;
+    
+    window.current.appendChild(showMessage);
+
+    setTimeout(() => {
+      showMessage.remove();
+    }, 3000); 
+  }
+
   return (
-    <div className="App">
+    <div ref={window} className="App">
       <Header />
       <main className="main">
         <div className="container">
@@ -184,7 +197,7 @@ export default function App() {
               <div className="form__box-input">
                 <label className="form__label" htmlFor="email">E-mail:</label>
                 <input 
-                  id="emaile"
+                  id="email"
                   className="form__input form__input__email" 
                   type="text"
                   placeholder="Informe seu endereço de e-mail..."
