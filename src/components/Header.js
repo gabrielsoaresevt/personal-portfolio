@@ -64,9 +64,10 @@ export default function Header() {
       <div className="container side-menu">
         <ul className="header__list__social-media">
           {
-            socialMediaListData.map(function(item) {
+            socialMediaListData.map((item, index) => {
               return (
                 <SocialMediaListItem 
+                  key={index}
                   icon={item.icon}
                   url={item.url}
                   alt={item.alt}
@@ -77,9 +78,10 @@ export default function Header() {
         </ul>
         <ul className="header__list__sections">
           {
-            navigationMenuListData.map(function(item) {
+            navigationMenuListData.map((item, index) => {
               return (
                 <NavigationMenuListItem 
+                  key={index}
                   href={item.href}
                   sectionName={item.sectionName}
                 />

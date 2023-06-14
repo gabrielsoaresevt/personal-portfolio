@@ -1,6 +1,6 @@
 export default function PortfolioListItem(props) {
   return (
-    <div className="portfolio__item">
+    <div key={props.index} className="portfolio__item">
       <h2 className="portfolio__item__title">
         {props.title}
       </h2>

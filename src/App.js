@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import SectionTitle from './components/SectionTitle';
 import PortfolioListItem from './components/PortfolioListItem';
+import TechStackListItem from './components/TechStackListItem';
 
 import spaceTourismWebsitePreview from './assets/img/portfolio/space-tourism-website.png';
 import newsHomepagePreview from './assets/img/portfolio/news-homepage.png';
@@ -37,6 +38,37 @@ const portfoliListData = [
     website: "https://the-future-space-tourism.netlify.app",
     preview: spaceTourismWebsitePreview,
     alt: "Imagem do projeto - Space Tourism Website"
+  }
+]
+
+const techStackListData = [
+  {
+    image: "https://raw.githubusercontent.com/get-icon/geticon/fc0f660daee147afb4a56c64e12bde6486b73e39/icons/html-5.svg",
+    altText: "Imagem ícone HTML5"
+  },
+  {
+    image: "https://raw.githubusercontent.com/get-icon/geticon/fc0f660daee147afb4a56c64e12bde6486b73e39/icons/css-3.svg",
+    altText: "Imagem ícone CSS3"
+  },
+    {
+    image: "https://raw.githubusercontent.com/get-icon/geticon/fc0f660daee147afb4a56c64e12bde6486b73e39/icons/javascript.svg",
+    altText: "Imagem ícone JavaScript"
+  },
+    {
+    image: "https://raw.githubusercontent.com/get-icon/geticon/master/icons/sass.svg",
+    altText: "Imagem ícone SASS"
+  },
+    {
+    image: "https://raw.githubusercontent.com/get-icon/geticon/master/icons/git-icon.svg",
+    altText: "Imagem ícone Git"
+  },
+    {
+    image: "https://raw.githubusercontent.com/get-icon/geticon/master/icons/bootstrap.svg",
+    altText: "Imagem ícone Bootstrap"
+  },
+  {
+    image: "https://raw.githubusercontent.com/get-icon/geticon/master/icons/visual-studio-code.svg",
+    altText: "Imagem ícone VS Code"
   }
 ]
 
@@ -97,9 +129,10 @@ export default function App() {
               title="Portfólio"
             />            
             {
-              portfoliListData.map(function(item) {
+              portfoliListData.map((item, index) => {
                 return (
                   <PortfolioListItem 
+                    key={index}
                     title={item.title}
                     description={item.description}
                     github={item.github}
@@ -119,13 +152,17 @@ export default function App() {
               Principais tecnologias e ferramentas que utilizado para desenvolvimento de websites
             </p>
             <ul className="tech-stack__images">
-              <li className="tech-stack__images__item"><img src="https://raw.githubusercontent.com/get-icon/geticon/fc0f660daee147afb4a56c64e12bde6486b73e39/icons/html-5.svg" alt="Imagem ícone HTML5"></img></li>
-              <li className="tech-stack__images__item"><img src="https://raw.githubusercontent.com/get-icon/geticon/fc0f660daee147afb4a56c64e12bde6486b73e39/icons/css-3.svg" alt="Imagem ícone CSS3"></img></li>
-              <li className="tech-stack__images__item"><img src="https://raw.githubusercontent.com/get-icon/geticon/fc0f660daee147afb4a56c64e12bde6486b73e39/icons/javascript.svg" alt="Imagem ícone JavaScript"></img></li>
-              <li className="tech-stack__images__item"><img src="https://raw.githubusercontent.com/get-icon/geticon/master/icons/sass.svg" alt="Imagem ícone SASS"></img></li>
-              <li className="tech-stack__images__item"><img src="https://raw.githubusercontent.com/get-icon/geticon/master/icons/git-icon.svg" alt="Imagem ícone Git"></img></li>
-              <li className="tech-stack__images__item"><img src="https://raw.githubusercontent.com/get-icon/geticon/master/icons/bootstrap.svg" alt="Imagem ícone Bootstrap"></img></li>
-              <li className="tech-stack__images__item"><img src="https://raw.githubusercontent.com/get-icon/geticon/master/icons/visual-studio-code.svg" alt="Imagem ícone VS Code"></img></li>
+              {
+                techStackListData.map((item, index) => {
+                  return(
+                    <TechStackListItem 
+                      key={index}
+                      image={item.image}
+                      alt={item.altText}
+                    />
+                  );
+                })
+              }
             </ul>
           </section>
           <section className="section">
@@ -134,7 +171,7 @@ export default function App() {
             />
             <form className="form" onSubmit={formValidation}>
               <div className="form__box-input">
-                <label className="form__label" for="name">Nome:</label>
+                <label className="form__label" htmlFor="name">Nome:</label>
                 <input 
                   id="name"
                   className="form__input form__input__name" 
@@ -145,7 +182,7 @@ export default function App() {
                 />
               </div>
               <div className="form__box-input">
-                <label className="form__label" for="email">E-mail:</label>
+                <label className="form__label" htmlFor="email">E-mail:</label>
                 <input 
                   id="emaile"
                   className="form__input form__input__email" 
@@ -156,7 +193,7 @@ export default function App() {
                 />
               </div>
               <div className="form__box-input">
-                <label className="form__label" for="message">Mensagem:</label>
+                <label className="form__label" htmlFor="message">Mensagem:</label>
                 <textarea 
                   id="message"
                   className="form__input form__input__message" 
