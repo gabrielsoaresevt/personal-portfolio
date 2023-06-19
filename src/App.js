@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react'
+import emailjs from '@emailjs/browser'
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -99,15 +100,40 @@ export default function App() {
       textMessage = "Máximo de caracteres permitidos: 1000";
     }
 
-    textMessage !== "" ? showMessage(textMessage) : textMessage = "Mensagem enviada com sucesso!"
+    if(textMessage !== "") {
+      showMessage(textMessage);
+      return false;
+    } else {
+      textMessage = "E-mail enviado com sucesso!";
+    }
 
-    showMessage(textMessage);
+    sendEmail(textMessage);
+  }
+
+  function sendEmail(textMessage) {
+    const templateParams = {
+      from_name: name,
+      message: message,
+      email: email
+    }
+
+    emailjs.send("service_ewrut2x", "template_8rgc3j9", templateParams, "rvb3tIoimxX8se9n-")
+    .then(() => {
+      showMessage(textMessage);
+      setName('');
+      setEmail('');
+      setMessage('');
+    }, (err) => {
+      textMessage = "Falha ao enviar e-mail..."
+      showMessage(textMessage);
+      console.log("Erro: ", err);
+    })
   }
 
   function showMessage(msg) {
     const showMessage = document.createElement('div');
     
-    if(msg !== "Mensagem enviada com sucesso!") {
+    if(msg !== "E-mail enviado com sucesso!") {
       showMessage.classList.add("alert");
     } else {
       showMessage.classList.add("alert", "sucess");
@@ -216,13 +242,17 @@ export default function App() {
                   value={message}
                 />
               </div>
-              <button className="button form__button" type="submit">Enviar</button>
+              <button className="button button-form" type="submit">Enviar</button>
             </form>
           </section>
           <section className="section">
             <SectionTitle
               title="Currículo"
             />
+            <p>
+              Veja meu resumo profissional, habilidades e certificações!
+            </p>
+            <a href="" className="button button-curriculum" rel="noreferrer">Baixar PDF</a>
           </section>
         </div>
       </main>
