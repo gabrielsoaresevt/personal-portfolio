@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import SectionTitle from './components/SectionTitle';
 import PortfolioListItem from './components/PortfolioListItem';
 import TechStackListItem from './components/TechStackListItem';
+import CurriculumPDF from './documents/curriculum-web-developer.pdf';
 
 import spaceTourismWebsitePreview from './assets/img/portfolio/space-tourism-website.png';
 import newsHomepagePreview from './assets/img/portfolio/news-homepage.png';
@@ -148,6 +149,8 @@ export default function App() {
     }, 3000); 
   }
 
+
+
   return (
     <div ref={window} className="App">
       <Header />
@@ -252,9 +255,10 @@ export default function App() {
             <p>
               Veja meu resumo profissional, habilidades e certificações!
             </p>
-            <a href="" className="button button-curriculum" rel="noreferrer">Baixar PDF</a>
+            <a href={CurriculumPDF} className="button button-curriculum">Baixar PDF</a>
           </section>
         </div>
+        
       </main>
       <Footer />
     </div>
