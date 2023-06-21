@@ -6,73 +6,9 @@ import Footer from './components/Footer';
 import SectionTitle from './components/SectionTitle';
 import PortfolioListItem from './components/PortfolioListItem';
 import TechStackListItem from './components/TechStackListItem';
-import CurriculumPDF from './documents/curriculum-web-developer.pdf';
+import CurriculumPDF from './documents/curriculum-web-developer.pdf'; 
 
-import spaceTourismWebsitePreview from './assets/img/portfolio/space-tourism-website.png';
-import newsHomepagePreview from './assets/img/portfolio/news-homepage.png';
-
-const portfoliListData = [
-  {
-    title: "Space Tourism Website",
-    description: `Desenvolvido com HTML, CSS, SASS/SCSS e JavaScript. Veja este projeto sobre turismo 
-    espacial com carousel exibindo planetas, a equipe espacial e suas tecnologias!
-    Layout totalmente responsivo e fluido.`,
-    github: "https://github.com/gabrielsoaresevt/space-tourism-website",
-    website: "https://the-future-space-tourism.netlify.app",
-    preview: spaceTourismWebsitePreview,
-    alt: "Imagem do projeto - Space Tourism Website"
-  },
-  {
-    title: "News Homepage",
-    description: `Desenvolvido com HTML, CSS Grid, Custom Properties, SASS/SCSS e JavaScript.
-    Veja uma um site com uma temática de página principal de notícias.`,
-    github: "https://github.com/gabrielsoaresevt/news-homepage",
-    website: "https://gabrielsoaresevt.github.io/news-homepage/",
-    preview: newsHomepagePreview,
-    alt: "Imagem do projeto - News Homepage"
-  },
-  {
-    title: "Space Tourism Website",
-    description: `Desenvolvido com HTML, CSS, SASS/SCSS e JavaScript. Veja este projeto sobre turismo 
-    espacial com carousel exibindo planetas, a equipe espacial e suas tecnologias!
-    Layout totalmente responsivo e fluido.`,
-    github: "https://github.com/gabrielsoaresevt/space-tourism-website",
-    website: "https://the-future-space-tourism.netlify.app",
-    preview: spaceTourismWebsitePreview,
-    alt: "Imagem do projeto - Space Tourism Website"
-  }
-]
-
-const techStackListData = [
-  {
-    image: "https://raw.githubusercontent.com/get-icon/geticon/fc0f660daee147afb4a56c64e12bde6486b73e39/icons/html-5.svg",
-    altText: "Imagem ícone HTML5"
-  },
-  {
-    image: "https://raw.githubusercontent.com/get-icon/geticon/fc0f660daee147afb4a56c64e12bde6486b73e39/icons/css-3.svg",
-    altText: "Imagem ícone CSS3"
-  },
-    {
-    image: "https://raw.githubusercontent.com/get-icon/geticon/fc0f660daee147afb4a56c64e12bde6486b73e39/icons/javascript.svg",
-    altText: "Imagem ícone JavaScript"
-  },
-    {
-    image: "https://raw.githubusercontent.com/get-icon/geticon/master/icons/sass.svg",
-    altText: "Imagem ícone SASS"
-  },
-    {
-    image: "https://raw.githubusercontent.com/get-icon/geticon/master/icons/git-icon.svg",
-    altText: "Imagem ícone Git"
-  },
-    {
-    image: "https://raw.githubusercontent.com/get-icon/geticon/master/icons/bootstrap.svg",
-    altText: "Imagem ícone Bootstrap"
-  },
-  {
-    image: "https://raw.githubusercontent.com/get-icon/geticon/master/icons/visual-studio-code.svg",
-    altText: "Imagem ícone VS Code"
-  }
-]
+import data from './data'; 
 
 export default function App() {
 
@@ -149,8 +85,6 @@ export default function App() {
     }, 3000); 
   }
 
-
-
   return (
     <div ref={window} className="App">
       <Header />
@@ -171,7 +105,7 @@ export default function App() {
               title="Portfólio"
             />            
             {
-              portfoliListData.map((item, index) => {
+              data.portfoliList.map((item, index) => {
                 return (
                   <PortfolioListItem 
                     key={index}
@@ -190,12 +124,12 @@ export default function App() {
             <SectionTitle
               title="Tech Stack"
             />
-            <p>
+            <p className="paragraph">
               Principais tecnologias e ferramentas que utilizado para desenvolvimento de websites
             </p>
             <ul className="tech-stack__images">
               {
-                techStackListData.map((item, index) => {
+                data.techStackList.map((item, index) => {
                   return(
                     <TechStackListItem 
                       key={index}
@@ -252,7 +186,7 @@ export default function App() {
             <SectionTitle
               title="Currículo"
             />
-            <p>
+            <p className="paragraph">
               Veja meu resumo profissional, habilidades e certificações!
             </p>
             <a href={CurriculumPDF} className="button button-curriculum">Baixar PDF</a>
