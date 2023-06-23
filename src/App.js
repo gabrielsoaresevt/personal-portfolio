@@ -82,6 +82,7 @@ export default function App() {
         <div className="container">
           <section className="main__apresentation section">
             <SectionTitle
+              id="inicio"
               title="Olá, me chamo Gabriel Soares Evangelista"
             />
             <p className="main__apresentation paragraph">
@@ -92,6 +93,7 @@ export default function App() {
           </section>
           <section className="section portfolio">
             <SectionTitle
+              id="portfolio"
               title="Portfólio"
             />            
             {
@@ -112,6 +114,7 @@ export default function App() {
           </section>
           <section className="section tech-stack">
             <SectionTitle
+              id="tech-stack"
               title="Tech Stack"
             />
             <p className="paragraph">
@@ -133,6 +136,7 @@ export default function App() {
           </section>
           <section className="section">
             <SectionTitle
+              id="contato"
               title="Contato"
             />
             <form className="form" onSubmit={validateForm}>
@@ -174,6 +178,7 @@ export default function App() {
           </section>
           <section className="section">
             <SectionTitle
+              id="curriculo"
               title="Currículo"
             />
             <p className="paragraph">

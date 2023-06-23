@@ -11,6 +11,7 @@
   text-align: center;
   overflow: hidden;
   animation: showErrorMessage 3s;
+  z-index: 2;
   &.sucess {
     background-color: #4BB543;
   }
@@ -54,5 +55,28 @@
   }
   100% {
     width: 0%;
+  }
+}
+
+@media (max-width: 921px) {
+  @keyframes showErrorMessage {
+    0% {
+      top: -60px;
+    }
+    5% {
+      top: 90px;
+    }
+    10% {
+      top: 70px;
+    }
+    90% {
+      top: 70px;
+    }
+    95% {
+      top: 90px;
+    }
+    100% {
+      top: -60px;
+    }
   }
 }

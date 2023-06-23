@@ -27,7 +27,7 @@
     font-weight: 700;
     color: $secondary-text-color;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 0px;
     span {
       font-size: var(--body-font-size);
       color: $primary-text-color;
@@ -54,7 +54,7 @@
   }
   &__list__sections {
     list-style: none;
-    margin-top: 40px;
+    margin-top: 60px;
     &__item { 
       margin: 15px 0;
       a {
@@ -65,6 +65,95 @@
           opacity: 0.7;
         }
       }
+    }
+  }
+  &__mobile-menu {
+    cursor: pointer;
+    position: absolute;
+    right: 28px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+    div {
+      width: 32px;
+      height: 2px;
+      background-color: #fff;
+      margin: 8px;
+    }
+  }
+}
+
+@media(max-width: 921px) {
+  .header {
+    width: 100vw;
+    height: 10vh;
+    border-right: none;
+    border-bottom: 1px solid $secondary-color;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 16px;
+    .container {
+      padding: 0;
+    }
+    &__profile-photo {
+      width: 60px;
+      border: none;
+    }
+    &__name {
+      margin-left: 10px;
+      text-align: left;
+      span {
+        padding-left: 7px;
+        margin-top: 3px;
+        font-size: 14px;
+      }
+    }
+    &__list__sections {
+      margin: 0;
+      position: fixed;
+      display: block;
+      background-color: $secondary-background-color;
+      right: 0;
+      top: 10vh;
+      width: 300px;
+      height: 82vh;
+      border-left: 1px solid #FFF;
+      transition: 0.325s ease-in-out;
+      transform: translateX(100%);
+      &.active {
+        transform: translateX(0);
+      }
+      &__item {
+        margin: 35px 0;
+      }
+    }
+    &__list__social-media {
+      position: fixed;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      bottom: 0.5vh;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 250px;
+      &__item {
+        img {
+          width: 37px;
+        }
+      }
+    }
+    &__mobile-menu {
+      display: block;
+    }
+  }
+}
+
+@media(max-width: 500px) {
+  .header {
+    &__list__sections {
+      width: 250px;
     }
   }
 }
