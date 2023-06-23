@@ -86,7 +86,7 @@
 @media(max-width: 921px) {
   .header {
     width: 100vw;
-    height: 10vh;
+    height: 9vh;
     border-right: none;
     border-bottom: 1px solid $secondary-color;
     z-index: 2;
@@ -104,6 +104,7 @@
     &__name {
       margin-left: 10px;
       text-align: left;
+      font-size: 16px;
       span {
         padding-left: 7px;
         margin-top: 3px;
@@ -116,9 +117,9 @@
       display: block;
       background-color: $secondary-background-color;
       right: 0;
-      top: 10vh;
+      top: 9vh;
       width: 300px;
-      height: 82vh;
+      height: 91vh;
       border-left: 1px solid #FFF;
       transition: 0.325s ease-in-out;
       transform: translateX(100%);
@@ -134,7 +135,7 @@
       display: flex;
       align-items: center;
       justify-content: space-around;
-      bottom: 0.5vh;
+      bottom: 10px;
       left: 50%;
       transform: translateX(-50%);
       width: 250px;
