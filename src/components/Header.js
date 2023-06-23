@@ -1,29 +1,9 @@
-import linkedinIcon from '../assets/img/icon/linkedin-icon.png';
-import youtubeIcon from '../assets/img/icon/youtube-icon.png';
-import githubIcon from '../assets/img/icon/github-icon.png';
-
 import SocialMediaListItem from './SocialMediaListItem';
 import NavigationMenuListItem from './NavigationMenuListItem';
 
-const socialMediaListData = [
-  {
-    icon: linkedinIcon,
-    url: "https://www.linkedin.com/in/gabriel-soares-evangelista",
-    alt: "Ícone do LinkedIn"
-  },
-  {
-    icon: youtubeIcon,
-    url: "https://www.youtube.com/@gabrielsoares9405/featured",
-    alt: "Ícone do Youtube"
-  },
-  {
-    icon: githubIcon,
-    url: "https://github.com/gabrielsoaresevt",
-    alt: "Ícone do GitHub"
-  }
-];
+import { data } from '../data';
 
-const navigationMenuListData = [
+const navigationMenuList = [
   {
     href: "#inicio",
     sectionName: "Início"
@@ -64,7 +44,7 @@ export default function Header() {
       <div className="container side-menu">
         <ul className="header__list__social-media">
           {
-            socialMediaListData.map((item, index) => {
+            data.socialMediaList.map((item, index) => {
               return (
                 <SocialMediaListItem 
                   key={index}
@@ -78,7 +58,7 @@ export default function Header() {
         </ul>
         <ul className="header__list__sections">
           {
-            navigationMenuListData.map((item, index) => {
+            navigationMenuList.map((item, index) => {
               return (
                 <NavigationMenuListItem 
                   key={index}

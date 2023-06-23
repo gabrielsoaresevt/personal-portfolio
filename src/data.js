@@ -1,4 +1,4 @@
-const data = {
+export const data = {
   "portfoliList": [
     {
       "title": "Space Tourism Website",
@@ -46,7 +46,22 @@ const data = {
       "image": "https://raw.githubusercontent.com/get-icon/geticon/master/icons/visual-studio-code.svg",
       "altText": "Imagem ícone VS Code"
     }
+  ],
+  "socialMediaList": [
+    {
+      icon: require('./assets/img/icon/linkedin-icon.png'),
+      url: "https://www.linkedin.com/in/gabriel-soares-evangelista",
+      alt: "Ícone do LinkedIn"
+    },
+    {
+      icon: require('./assets/img/icon/youtube-icon.png'),
+      url: "https://www.youtube.com/@gabrielsoares9405/featured",
+      alt: "Ícone do Youtube"
+    },
+    {
+      icon: require('./assets/img/icon/github-icon.png'),
+      url: "https://github.com/gabrielsoaresevt",
+      alt: "Ícone do GitHub"
+    }
   ]
 }
-
-export default data;

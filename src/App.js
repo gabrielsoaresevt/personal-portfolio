@@ -8,23 +8,19 @@ import PortfolioListItem from './components/PortfolioListItem';
 import TechStackListItem from './components/TechStackListItem';
 import CurriculumPDF from './documents/curriculum-web-developer.pdf'; 
 
-import data from './data'; 
+import { data } from './data.js';
 
 export default function App() {
+  const appContainerRef = useRef();
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-  const window = useRef();
-
-  function formValidation(e) {
+  function validateForm(e) {
     e.preventDefault();
-
     const regEx = /[a-zA-Z0-9._%+-]+@[a-z0-9·-]+\.[a-z]{2,8}(.[a-z{2,8}])?/g;
-
     let textMessage = "";
-
     if(name === '') {
       textMessage = "Preencha o campo nome";
     } else if(email === '') {
@@ -36,14 +32,12 @@ export default function App() {
     } else if (message.length > 300) {
       textMessage = "Máximo de caracteres permitidos: 1000";
     }
-
     if(textMessage !== "") {
       showMessage(textMessage);
       return false;
     } else {
       textMessage = "E-mail enviado com sucesso!";
     }
-
     sendEmail(textMessage);
   }
 
@@ -67,26 +61,22 @@ export default function App() {
     })
   }
 
-  function showMessage(msg) {
+  function showMessage(textMessage) {
     const showMessage = document.createElement('div');
-    
-    if(msg !== "E-mail enviado com sucesso!") {
+    if(textMessage !== "E-mail enviado com sucesso!") {
       showMessage.classList.add("alert");
     } else {
       showMessage.classList.add("alert", "sucess");
     }
-
-    showMessage.innerText = msg;
-    
-    window.current.appendChild(showMessage);
-
+    showMessage.innerText = textMessage;
+    appContainerRef.current.appendChild(showMessage);
     setTimeout(() => {
       showMessage.remove();
     }, 3000); 
   }
 
   return (
-    <div ref={window} className="App">
+    <div ref={appContainerRef} className="App">
       <Header />
       <main className="main">
         <div className="container">
@@ -145,7 +135,7 @@ export default function App() {
             <SectionTitle
               title="Contato"
             />
-            <form className="form" onSubmit={formValidation}>
+            <form className="form" onSubmit={validateForm}>
               <div className="form__box-input">
                 <label className="form__label" htmlFor="name">Nome:</label>
                 <input 
@@ -191,8 +181,7 @@ export default function App() {
             </p>
             <a href={CurriculumPDF} className="button button-curriculum">Baixar PDF</a>
           </section>
-        </div>
-        
+        </div> 
       </main>
       <Footer />
     </div>
