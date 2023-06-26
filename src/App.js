@@ -83,6 +83,7 @@ export default function App() {
             <SectionTitle
               id="inicio"
               title="Olá, me chamo Gabriel Soares Evangelista"
+              className="apresentation main__apresentation__title section-title"
             />
             <p className="main__apresentation paragraph">
               Desenvolvedor Web Freelancer e UI/UX Designer. Minha paixão é entender as necessidades
@@ -94,6 +95,7 @@ export default function App() {
             <SectionTitle
               id="portfolio"
               title="Portfólio"
+              className="section-title"
             />            
             {
               data.portfoliList.map((item, index) => {
@@ -115,6 +117,7 @@ export default function App() {
             <SectionTitle
               id="tech-stack"
               title="Tech Stack"
+              className="section-title"
             />
             <p className="paragraph">
               Principais tecnologias e ferramentas que utilizado para desenvolvimento de websites
@@ -137,6 +140,7 @@ export default function App() {
             <SectionTitle
               id="contato"
               title="Contato"
+              className="section-title"
             />
             <form className="form" onSubmit={validateForm}>
               <div className="form__box-input">
@@ -179,6 +183,7 @@ export default function App() {
             <SectionTitle
               id="curriculo"
               title="Currículo"
+              className="section-title" 
             />
             <p className="paragraph">
               Veja meu resumo profissional, habilidades e certificações!

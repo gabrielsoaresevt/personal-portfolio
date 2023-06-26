@@ -57,7 +57,7 @@ export default function Header() {
         </ul>
       </div>
       <div className="container">
-        <div onClick={toggleMenu} className="header__mobile-menu">
+        <div onClick={toggleMenu} className={`header__mobile-menu ${isOpen ? "active" : "" }`}>
           <div className="line-one"></div>
           <div className="line-two"></div>
           <div className="line-three"></div>
