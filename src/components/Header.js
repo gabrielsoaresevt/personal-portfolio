@@ -5,29 +5,6 @@ import NavigationMenuListItem from './NavigationMenuListItem';
 
 import { data } from '../data';
 
-const navigationMenuList = [
-  {
-    href: "#inicio",
-    sectionName: "Início"
-  },
-  {
-    href: "#portfolio",
-    sectionName: "Portfólio"
-  },
-  {
-    href: "#tech-stack",
-    sectionName: "Tech Stack"
-  },
-  {
-    href: "#contato",
-    sectionName: "Contato"
-  },
-  {
-    href: "#curriculo",
-    sectionName: "Currículo"
-  }
-]
-
 export default function Header() {
 
   const [isOpen, setIsOpen] = useState(false);
@@ -66,7 +43,7 @@ export default function Header() {
         </ul>
         <ul className={`header__list__sections ${isOpen ? "active" : "" }`}>
           {
-            navigationMenuList.map((item, index) => {
+            data.navigationMenuList.map((item, index) => {
               return (
                 <NavigationMenuListItem 
                   toggleMenu={toggleMenu}

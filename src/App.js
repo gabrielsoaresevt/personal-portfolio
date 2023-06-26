@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
 import Header from './components/Header';
@@ -12,7 +12,6 @@ import { data } from './data.js';
 
 export default function App() {
   const appContainerRef = useRef();
-  const rain = useRef();
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -75,36 +74,10 @@ export default function App() {
       showMessage.remove();
     }, 3000); 
   }
-
-  useEffect(() => {
-    for(let i = 0; i < 25; i++) {
-
-      const li = document.createElement("li");
-      
-      const randomNumber = (min, max) => Math.random() * (max - min) + min;
-      const sizeWidth = Math.floor(randomNumber(1, 3))
-      const sizeHeight = Math.floor(randomNumber(20, 50))
-      const position = randomNumber(1, 99);
-      const delay = randomNumber(5, 0.1);
-      const duration = randomNumber(12, 6);
-      
-      li.style.width = `${sizeWidth}px`;
-      li.style.height = `${sizeHeight}px`;
-      li.style.left = `${position}%`;
-      li.style.animationDelay = `${delay}s`;
-      li.style.duration = `${duration}s`;
-      li.style.animationTimingFunction = `cubic-bezier(${Math.random()}, ${Math.random()}, ${Math.random()}, ${Math.random()} )`;
-      
-      rain.current.appendChild(li);
-    }
-  }, [])
-
   return (
     <div ref={appContainerRef} className="App">
       <Header />
       <main className="main">
-        <ul ref={rain} className="rain">
-        </ul>
         <div className="container">
           <section className="main__apresentation section">
             <SectionTitle

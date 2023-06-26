@@ -86,8 +86,7 @@
 @media(max-width: 921px) {
   .header {
     width: 100vw;
-    min-height: 65px;
-    height: 9vh;
+    height: 10vh;
     border-right: none;
     border-bottom: 1px solid $secondary-color;
     z-index: 2;
@@ -118,9 +117,9 @@
       display: block;
       background-color: $secondary-background-color;
       right: 0;
-      top: 9vh;
+      top: 10vh;
       width: 300px;
-      height: 91vh;
+      height: 90vh;
       border-left: 1px solid #FFF;
       transition: 0.325s ease-in-out;
       transform: translateX(100%);
@@ -136,7 +135,7 @@
       display: flex;
       align-items: center;
       justify-content: space-around;
-      bottom: 10px;
+      bottom: 7px;
       left: 50%;
       transform: translateX(-50%);
       width: 250px;

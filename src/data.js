@@ -63,5 +63,27 @@ export const data = {
       url: "https://github.com/gabrielsoaresevt",
       alt: "Ícone do GitHub"
     }
+  ],
+  "navigationMenuList": [
+    {
+      href: "#inicio",
+      sectionName: "Início"
+    },
+    {
+      href: "#portfolio",
+      sectionName: "Portfólio"
+    },
+    {
+      href: "#tech-stack",
+      sectionName: "Tech Stack"
+    },
+    {
+      href: "#contato",
+      sectionName: "Contato"
+    },
+    {
+      href: "#curriculo",
+      sectionName: "Currículo"
+    }
   ]
 }
