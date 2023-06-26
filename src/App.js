@@ -1,5 +1,5 @@
-import { useState, useRef, useEffect } from 'react'
-import emailjs from '@emailjs/browser'
+import { useState, useRef, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
 
 import Header from './components/Header';
 import Footer from './components/Footer';

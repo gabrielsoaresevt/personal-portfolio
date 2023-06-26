@@ -44,7 +44,7 @@
     gap: 30px;
     &__item {
       img {
-        width: 40px;
+        width: 35px;
         transition: 0.225s ease;
         &:hover {
           opacity: 0.7;
@@ -86,6 +86,7 @@
 @media(max-width: 921px) {
   .header {
     width: 100vw;
+    min-height: 65px;
     height: 9vh;
     border-right: none;
     border-bottom: 1px solid $secondary-color;
