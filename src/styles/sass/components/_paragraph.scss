@@ -1,4 +1,14 @@
 .paragraph {
   line-height: var(--paragraph-line-height);
   max-width: 750px;
+  &.copyright {
+    margin-top: 100px;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    a {
+      color: $primary-color;
+    }
+  }
 }
+

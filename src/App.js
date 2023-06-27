@@ -17,8 +17,17 @@ import { data } from './data.js';
 export default function App() {
   const appContainerRef = useRef();
   const typeWriterAnimation = useRef();
+  const copyright = useRef();
+
+  const year = new Date();
+  const currentYear = year.getFullYear();
 
   useEffect(() => {
+    copyright.current.innerHTML = `
+      Copyright © ${currentYear}. All Rights Reserved <br/>
+      Tech Stack Images from <a target="_blank" href="https://github.com/get-icon/geticon" rel="noreferrer">@tomchen</a>
+    `;
+
     const writer = new Typewriter(typeWriterAnimation.current, {
       loop: true,
       typeColor: '#FFF',
@@ -38,7 +47,7 @@ export default function App() {
       .start()
     
     Aos.init({ duration: 2500 });
-  }, [])
+  }, [currentYear])
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -216,6 +225,8 @@ export default function App() {
             </p>
             <a href={CurriculumPDF} className="button button-curriculum">Baixar PDF</a>
           </section>
+          <p ref={copyright} className="paragraph copyright">
+          </p>
         </div> 
       </main>
       <Footer />
