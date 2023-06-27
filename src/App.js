@@ -24,7 +24,7 @@ export default function App() {
 
   useEffect(() => {
     copyright.current.innerHTML = `
-      Copyright © ${currentYear}. All Rights Reserved <br/>
+      Designed and Built by Gabriel ©${currentYear}<br/>
       Tech Stack Images from <a target="_blank" href="https://github.com/get-icon/geticon" rel="noreferrer">@tomchen</a>
     `;
 
