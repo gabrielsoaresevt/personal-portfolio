@@ -2,6 +2,9 @@ import { useState, useRef, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import Typewriter from 't-writer.js';
 
+import Aos from  "aos";
+import "aos/dist/aos.css";
+
 import Header from './components/Header';
 import Footer from './components/Footer';
 import SectionTitle from './components/SectionTitle';
@@ -33,6 +36,8 @@ export default function App() {
       .rest(550)
       .clear()
       .start()
+    
+    Aos.init({ duration: 2500 });
   }, [])
 
   const [name, setName] = useState('');
@@ -102,9 +107,9 @@ export default function App() {
       <main className="main">
         <div className="container">
           <section className="main__apresentation section">
-            <h2 id="inicio" ref={typeWriterAnimation} className="apresentation main__apresentation__title section-title">
+            <h2 data-aos="fade-right" id="inicio" ref={typeWriterAnimation} className="apresentation main__apresentation__title section-title">
             </h2>
-            <p className="main__apresentation paragraph">
+            <p data-aos="fade" className="main__apresentation paragraph">
               Meu objetivo como Desenvolvedor Web é combinar design, funcionalidades e performance para juntos criarmos algo incrível!
               Entender as necessidades dos meus clientes e transformá-las em soluções únicas é o que me motiva.
               <br />
@@ -143,7 +148,7 @@ export default function App() {
             <p className="paragraph">
               Principais tecnologias e ferramentas que utilizado para desenvolvimento de websites
             </p>
-            <ul className="tech-stack__images">
+            <ul data-aos="fade" className="tech-stack__images">
               {
                 data.techStackList.map((item, index) => {
                   return(
@@ -163,7 +168,7 @@ export default function App() {
               title="Contato"
               className="section-title"
             />
-            <form className="form" onSubmit={validateForm}>
+            <form  data-aos="fade-bottom" className="form" onSubmit={validateForm}>
               <div className="form__box-input">
                 <label className="form__label" htmlFor="name">Nome:</label>
                 <input 
@@ -206,7 +211,7 @@ export default function App() {
               title="Currículo"
               className="section-title" 
             />
-            <p className="paragraph">
+            <p data-aos="fade-right" className="paragraph">
               Veja meu resumo profissional, habilidades e certificações!
             </p>
             <a href={CurriculumPDF} className="button button-curriculum">Baixar PDF</a>

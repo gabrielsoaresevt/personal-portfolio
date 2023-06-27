@@ -1,6 +1,14 @@
+import { useEffect } from "react";
+import Aos from  "aos";
+import "aos/dist/aos.css";
+
 export default function PortfolioListItem(props) {
+  useEffect(() => {
+    Aos.init({ duration: 2000})
+  })
+
   return (
-    <div key={props.index} className="portfolio__item">
+    <div data-aos="fade-bottom" key={props.index} className="portfolio__item">
       <h2 className="portfolio__item__title">
         {props.title}
       </h2>

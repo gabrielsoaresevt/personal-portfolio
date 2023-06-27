@@ -1,4 +1,7 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
+
+import Aos from  "aos";
+import "aos/dist/aos.css";
 
 import SocialMediaListItem from './SocialMediaListItem';
 import NavigationMenuListItem from './NavigationMenuListItem';
@@ -6,6 +9,10 @@ import NavigationMenuListItem from './NavigationMenuListItem';
 import { data } from '../data';
 
 export default function Header() {
+
+  useEffect(() => {
+    Aos.init({ duration: 2500 });
+  })
 
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => {
@@ -15,7 +22,7 @@ export default function Header() {
   return (
     <header className="header">
       <div className="container">
-        <div className="container__overlay-img">
+        <div data-aos="fade" className="container__overlay-img">
           <img className="header__profile-photo"
             src="https://github.com/gabrielsoaresevt.png" 
             alt="Foto do Gabriel Soares Evangelista"
@@ -23,7 +30,7 @@ export default function Header() {
           <span className="overlay"></span> 
         </div>
       </div>
-      <p className="header__name">
+      <p data-aos="fade" className="header__name">
         Gabriel Soares Evangelista
         <span className="header__role">
           Desenvolvedor Web
