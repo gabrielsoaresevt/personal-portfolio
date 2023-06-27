@@ -1,5 +1,6 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
+import Typewriter from 't-writer.js';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -12,6 +13,27 @@ import { data } from './data.js';
 
 export default function App() {
   const appContainerRef = useRef();
+  const typeWriterAnimation = useRef();
+
+  useEffect(() => {
+    const writer = new Typewriter(typeWriterAnimation.current, {
+      loop: true,
+      typeColor: '#FFF',
+      cursorColor: '#FFF'
+    })
+    writer
+      .type('Olá, eu sou Web Developer')
+      .rest(550)
+      .changeOps({ deleteSpeed: 80 })
+      .remove(13)
+      .type('UI/UX Designer')
+      .rest(550)
+      .remove(21)
+      .type('seja bem-vindo!')
+      .rest(550)
+      .clear()
+      .start()
+  }, [])
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -80,15 +102,14 @@ export default function App() {
       <main className="main">
         <div className="container">
           <section className="main__apresentation section">
-            <SectionTitle
-              id="inicio"
-              title="Olá, me chamo Gabriel Soares Evangelista"
-              className="apresentation main__apresentation__title section-title"
-            />
+            <h2 id="inicio" ref={typeWriterAnimation} className="apresentation main__apresentation__title section-title">
+            </h2>
             <p className="main__apresentation paragraph">
-              Desenvolvedor Web Freelancer e UI/UX Designer. Minha paixão é entender as necessidades
-              dos meus clientes e buscar ajudá-los da melhor forma possível para entregar aquilo que cumpra com suas
-              expectativas e faça a diferença em suas vidas!
+              Meu objetivo como Desenvolvedor Web é combinar design, funcionalidades e performance para juntos criarmos algo incrível!
+              Entender as necessidades dos meus clientes e transformá-las em soluções únicas é o que me motiva.
+              <br />
+              <br />
+              Explore meu portfólio e descubra como posso elevar sua presença online para o próximo nível!
             </p>
           </section>
           <section className="section portfolio">

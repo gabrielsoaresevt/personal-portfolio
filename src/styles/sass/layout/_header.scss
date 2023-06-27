@@ -9,18 +9,31 @@
   border-right: 1px solid $secondary-color;
   .container {
     padding: 40px 20px;
+    &__overlay-img {
+      position: relative;
+      .overlay {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 80px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(70deg);
+        background-color: $primary-color;
+        position: absolute;
+        z-index: -1;
+        clip-path: polygon(30% 0, 0 100%, 100% 65%);
+        opacity: .7;
+      }
+    }
   }
   &__profile-photo {
-    width: 100px;
+    width: 90px;
     margin: 0 auto;
-    border-radius: 100%;
     display: block;
-    border: 2px solid $primary-color;
-    padding: 5px;
     transition: transform .3s;
-    &:hover {
-      transform: scale(1.1);
-    }
+    clip-path: polygon(29% 0, 0 100%, 100% 65%);
+    position: relative;
   }
   &__name {
     font-size: var(--primary-heading-font-size);
@@ -109,9 +122,15 @@
     padding: 0 16px;
     .container {
       padding: 0;
+      &__overlay-img {
+        .overlay {
+          width: 50px;
+          height: 50px;
+        }
+      }
     }
     &__profile-photo {
-      width: 60px;
+      width: 50px;
       border: none;
     }
     &__name {
