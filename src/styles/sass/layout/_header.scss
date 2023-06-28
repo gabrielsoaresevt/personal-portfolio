@@ -97,6 +97,7 @@
     width: 100vw;
     max-width: 100%;
     height: 10vh;
+    min-height: 70px;
     border-right: none;
     border-bottom: 1px solid $secondary-color;
     z-index: 2;
@@ -122,15 +123,16 @@
       }
     }
     &__list__sections {
+      padding-top: 100px;
       margin: 0;
       position: fixed;
       display: block;
       background-color: $secondary-background-color;
       right: 0;
-      top: 10vh;
+      top: 0;
       width: 300px;
-      height: 90vh;
-      border-left: 1px solid #FFF;
+      height: 100vh;
+      border-left: 1px solid #fff;
       transition: 0.325s ease-in-out;
       transform: translateX(100%);
       &.active {
