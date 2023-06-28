@@ -121,7 +121,7 @@ export default function App() {
             <p data-aos="fade" className="main__apresentation paragraph">
               Meu objetivo como Desenvolvedor Web é combinar design, funcionalidades e performance para juntos criarmos algo incrível!
               Utilizando tecnologias como <span className="accent-text">HTML</span>, <span className="accent-text">CSS</span>, <span className="accent-text">JavaScript</span>, <span className="accent-text">Sass/SCSS</span>, <span className="accent-text">React</span> e outras, me comprometo a
-              entender as necessidades dos meus clientes e transformá-las em soluções únicas. Isso é o que me motiva.
+              entender as necessidades dos meus clientes e transformá-las em soluções únicas.
             <br />
             <br />
               Explore meu portfólio e descubra como posso elevar sua presença online para o próximo nível!
