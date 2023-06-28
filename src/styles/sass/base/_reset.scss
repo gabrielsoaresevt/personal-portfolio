@@ -18,6 +18,20 @@ body {
   color: $primary-text-color;
 }
 
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #04060d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #005EBB;
+  border: 3px solid #050811;  
+  border-radius: 5px;
+}
+
 @media (max-width: $mobileScreen) {
   html {
     scroll-padding-top: 90px;
