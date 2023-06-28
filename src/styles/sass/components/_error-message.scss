@@ -58,7 +58,7 @@
   }
 }
 
-@media (max-width: 921px) {
+@media (max-width: $mobileScreen) {
   @keyframes showErrorMessage {
     0% {
       top: -60px;

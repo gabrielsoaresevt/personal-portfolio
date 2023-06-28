@@ -92,7 +92,7 @@
   }
 }
 
-@media(max-width: 921px) {
+@media(max-width: $mobileScreen) {
   .header {
     width: 100vw;
     max-width: 100%;

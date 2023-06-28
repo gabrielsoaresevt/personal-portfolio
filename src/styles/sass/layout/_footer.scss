@@ -25,7 +25,7 @@
   }
 }
 
-@media (max-width: 921px) {
+@media (max-width: $mobileScreen) {
   .footer {
     width: 100vw;
     height: 55px;
