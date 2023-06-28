@@ -45,6 +45,18 @@ export const data = {
     {
       "image": "https://raw.githubusercontent.com/get-icon/geticon/master/icons/visual-studio-code.svg",
       "altText": "Imagem ícone VS Code"
+    },
+    {
+      "image": "https://raw.githubusercontent.com/get-icon/geticon/fc0f660daee147afb4a56c64e12bde6486b73e39/icons/react.svg",
+      "altText": "Imagem do ícone React"
+    },
+    {
+      "image": "https://raw.githubusercontent.com/get-icon/geticon/fc0f660daee147afb4a56c64e12bde6486b73e39/icons/nodejs-icon.svg",
+      "altText": "Imagem do ícone Node.js"
+    },
+    {
+      "image": "https://raw.githubusercontent.com/get-icon/geticon/fc0f660daee147afb4a56c64e12bde6486b73e39/icons/npm.svg",
+      "altText": "Imagem do ícone Node Package Manager"
     }
   ],
   "socialMediaList": [
