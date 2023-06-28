@@ -22,12 +22,11 @@ export default function Header() {
   return (
     <header className="header">
       <div className="container">
-        <div data-aos="fade" className="container__overlay-img">
+        <div data-aos="fade" className="container__img">
           <img className="header__profile-photo"
             src="https://github.com/gabrielsoaresevt.png" 
             alt="Foto do Gabriel Soares Evangelista"
           />
-          <span className="overlay"></span> 
         </div>
       </div>
       <p data-aos="fade" className="header__name">
@@ -66,12 +65,10 @@ export default function Header() {
           }
         </ul>
       </div>
-      <div className="container">
-        <div onClick={toggleMenu} className={`header__mobile-menu ${isOpen ? "active" : "" }`}>
-          <div className="line-one"></div>
-          <div className="line-two"></div>
-          <div className="line-three"></div>
-        </div>
+      <div onClick={toggleMenu} className={`header__mobile-menu ${isOpen ? "active" : "" }`}>
+        <div className="line-one"></div>
+        <div className="line-two"></div>
+        <div className="line-three"></div>
       </div>
     </header>
   );
