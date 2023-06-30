@@ -45,19 +45,7 @@ export default function App() {
       .type('UI & UX Designer')
       .rest(550)
       .clear()
-      .start()
-      // .type('Olá, eu sou Web Developer')
-      // .rest(550)
-      // .changeOps({ deleteSpeed: 80 })
-      // .remove(13)
-      // .type('UI/UX Designer')
-      // .rest(550)
-      // .remove(21)
-      // .type('seja bem-vindo!')
-      // .rest(550)
-      // .clear()
-      // .start()
-    
+      .start()    
     Aos.init({ duration: 2500 });
   }, [currentYear])
 
@@ -128,7 +116,7 @@ export default function App() {
       <main className="main">
         <div className="container">
           <section className="main__apresentation section">
-            <h2 data-aos="fade-right" id="inicio" ref={typeWriterAnimation} className="apresentation main__apresentation__title section-title">
+            <h2 data-aos="fade" id="inicio" ref={typeWriterAnimation} className="apresentation main__apresentation__title section-title">
             </h2>
             <p data-aos="fade" className="main__apresentation paragraph">
               Meu objetivo como Desenvolvedor Web é combinar design, funcionalidades e performance para juntos criarmos algo incrível!
