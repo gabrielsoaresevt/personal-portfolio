@@ -2,8 +2,9 @@
   margin-bottom: 60px;
   &__title {
     font-size: var(--primary-heading-font-size);
-    margin: 10px 0 30px 0;
+    margin: 10px 0 15px 0;
     color: $secondary-text-color;
+    text-transform: uppercase;
   }
   &__info {
     display: flex;

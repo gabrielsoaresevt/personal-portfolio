@@ -34,10 +34,10 @@ export default function App() {
       cursorColor: '#FFF'
     })
     writer
-      .type('Olá, seja bem-vindo!')
+      .type('Olá, seja bem-vindo :)')
       .rest(550)
       .changeOps({ deleteSpeed: 80 })
-      .remove(20)
+      .remove(22)
       .type('Eu sou Desenvolvedor Web')
       .rest(550)
       .changeOps({ deleteSpeed: 80 })
@@ -119,7 +119,7 @@ export default function App() {
             <h2 data-aos="fade" id="inicio" ref={typeWriterAnimation} className="apresentation main__apresentation__title section-title">
             </h2>
             <p data-aos="fade" className="main__apresentation paragraph">
-              Meu objetivo como Desenvolvedor Web é combinar design, funcionalidades e performance para juntos criarmos algo incrível!
+              Minha missão como Desenvolvedor Web é combinar design, funcionalidades e performance para juntos criarmos algo incrível!
               Utilizando tecnologias como <span className="accent-text">HTML</span>, <span className="accent-text">CSS</span>, <span className="accent-text">JavaScript</span>, <span className="accent-text">Sass/SCSS</span>, <span className="accent-text">React</span> e outras, me comprometo a
               entender as necessidades dos meus clientes e transformá-las em soluções únicas.
             <br />
@@ -221,7 +221,7 @@ export default function App() {
               title="Currículo"
               className="section-title" 
             />
-            <p data-aos="fade-right" className="paragraph">
+            <p data-aos="fade" className="paragraph">
               Veja meu resumo profissional, habilidades e certificações!
             </p>
             <a href={CurriculumPDF} className="button button-curriculum">Baixar PDF</a>
