@@ -12,9 +12,17 @@ export const data = {
       "title": "News Homepage",
       "description": "Desenvolvido com HTML, CSS Grid, Custom Properties, SASS/SCSS e JavaScript. Veja uma um site com uma temática de página principal de notícias.",
       "github": "https://github.com/gabrielsoaresevt/news-homepage",
-      "website": "https://gabrielsoaresevt.github.io/news-homepage/",
+      "website": "https://news-homepag-website.netlify.app/",
       "preview": require("./assets/img/portfolio/news-homepage.png"),
       "alt": "Imagem do projeto - News Homepage"
+    },
+    {
+      "title": "Your Next Movie",
+      "description": "Se você está sem ideia de que filme assitir confira este projeto! Your Next Movie retorna um filme aleatório da The Movie Database API.",
+      "github": "https://github.com/gabrielsoaresevt/your-next-movie",
+      "website": "https://your-next-movie.netlify.app/",
+      "preview": require("./assets/img/portfolio/your-next-movie.png"),
+      "alt": "Imagem do projeto - Your Next Moview"
     }
   ],
   "techStackList": [
