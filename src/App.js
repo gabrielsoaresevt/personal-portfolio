@@ -34,7 +34,7 @@ export default function App() {
       cursorColor: '#FFF'
     })
     writer
-      .type('Olá, seja bem-vindo :)')
+      .type('O que vamos construir?')
       .rest(550)
       .changeOps({ deleteSpeed: 80 })
       .remove(22)
