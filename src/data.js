@@ -75,7 +75,7 @@ export const data = {
     },
     {
       icon: require('./assets/img/icon/youtube-icon.png'),
-      url: "https://www.youtube.com/@gabrielsoares9405/featured",
+      url: "https://www.youtube.com/@gabrielsoaresevt/featured",
       alt: "Ícone do Youtube"
     },
     {
