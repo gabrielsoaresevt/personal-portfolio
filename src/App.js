@@ -156,7 +156,7 @@ export default function App() {
               className="section-title"
             />
             <p className="paragraph">
-              Principais tecnologias e ferramentas que utilizado para desenvolvimento de websites
+              Principais tecnologias e ferramentas que utilizo para o desenvolvimento de websites
             </p>
             <ul data-aos="fade" className="tech-stack__images">
               {
