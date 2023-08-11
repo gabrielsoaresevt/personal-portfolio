@@ -54,7 +54,7 @@ export default function App() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-  function validateForm(e) {
+  function validateForm(e) {    
     e.preventDefault();
     formButton.current.disabled = true;
     setTimeout(() => {
