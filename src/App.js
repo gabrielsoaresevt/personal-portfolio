@@ -18,6 +18,7 @@ export default function App() {
   const appContainerRef = useRef();
   const typeWriterAnimation = useRef();
   const copyright = useRef();
+  const formButton = useRef();
 
   const year = new Date();
   const currentYear = year.getFullYear();
@@ -55,6 +56,10 @@ export default function App() {
 
   function validateForm(e) {
     e.preventDefault();
+    formButton.current.disabled = true;
+    setTimeout(() => {
+      formButton.current.disabled = false;
+    }, 3000)
     const regEx = /[a-zA-Z0-9._%+-]+@[a-z0-9·-]+\.[a-z]{2,8}(.[a-z{2,8}])?/g;
     let textMessage = "";
     if(name === '') {
@@ -74,10 +79,15 @@ export default function App() {
     } else {
       textMessage = "E-mail enviado com sucesso!";
     }
-    sendEmail(textMessage);
+
+    const spinner = document.createElement('div');
+    spinner.classList.add('spinner');
+    appContainerRef.current.appendChild(spinner);
+
+    sendEmail(textMessage, spinner);
   }
 
-  function sendEmail(textMessage) {
+  function sendEmail(textMessage, spinner) {
     const templateParams = {
       from_name: name,
       message: message,
@@ -86,11 +96,13 @@ export default function App() {
 
     emailjs.send("service_ewrut2x", "template_8rgc3j9", templateParams, "rvb3tIoimxX8se9n-")
     .then(() => {
+      spinner.remove();
       showMessage(textMessage);
       setName('');
       setEmail('');
       setMessage('');
     }, (err) => {
+      spinner.remove();
       textMessage = "Falha ao enviar e-mail..."
       showMessage(textMessage);
       console.log("Erro: ", err);
@@ -212,7 +224,7 @@ export default function App() {
                   value={message}
                 />
               </div>
-              <button className="button button-form" type="submit">Enviar</button>
+              <button ref={formButton} className="button button-form" type="submit">Enviar</button>
             </form>
           </section>
           <section className="section">
