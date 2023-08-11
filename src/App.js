@@ -80,6 +80,7 @@ export default function App() {
       textMessage = "E-mail enviado com sucesso!";
     }
 
+
     const spinner = document.createElement('div');
     spinner.classList.add('spinner');
     appContainerRef.current.appendChild(spinner);
